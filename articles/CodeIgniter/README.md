@@ -21,7 +21,7 @@ $this->load->view('view.php');
 $this->load->model('news_model');
 ```
 
-Místo názvu třídy s namespace mu předáváte “pseudocestu” ke třídě. Takže pokud budete mít modelovou třídu **News** v souboru **News.php** a ve složce **models/data**, načte vám jí, pokud zavoláte `$this->load->model(‘data/news’)`. V případě, že vám adresářová struktura později nebude vyhovovat, víte co vás *<span title="přepisování cest, všude kde načítáte závislosti">čeká<sup>?</sup></span>*. Navíc si zvykněte na používání prefixů/sufixů.<br>
+Místo názvu třídy s namespace mu předáváte “pseudocestu” ke třídě. Takže pokud budete mít modelovou třídu **News** v souboru **News.php** a ve složce **models/data**, načte vám jí, pokud zavoláte `$this->load->model('data/news')`. V případě, že vám adresářová struktura později nebude vyhovovat, víte co vás *<span title="přepisování cest, všude kde načítáte závislosti">čeká<sup>?</sup></span>*. Navíc si zvykněte na používání prefixů/sufixů.<br>
 Dále dělá **CI_Loader** opravdu hodně věcí. Když načtete **view**, tak vám ho rovnou vyrenderuje, u modelových tříd a tzv. [libraries](http://www.codeigniter.com/user_guide/libraries/index.html), vám zpřístupní podle nich pojmenované property.
 
 ```php
@@ -35,7 +35,7 @@ Víme, jak skvělé jsou neviditelné závislosti, takže nám tohle všechno sa
 ##Konfigurace
 
 Po vytvoření vlastního php souboru ve složce **config**, můžete přidávat svá konfigurační data do předepsaného pole `$config` v globálním scopu.<br>
-Pro přístup k těmto datům pokračujete opět ve stejném duchu. Podědíte **CI_Controller** nebo **CI_Model** a sáhnete si na magickou proměnou `$config`. V té se nachází třída [CI_Config](http://www.codeigniter.com/user_guide/libraries/config.html?highlight=ci_config), pomocí níž můžete s veškerou konfigurací manipulovat. Ale pozor - vlastní soubor si nejdříve musíte načíst `$this->config->load(‘my_config.php’)` (jakoby už to nebylo úplně jedno).<br>
+Pro přístup k těmto datům pokračujete opět ve stejném duchu. Podědíte **CI_Controller** nebo **CI_Model** a sáhnete si na magickou proměnou `$config`. V té se nachází třída [CI_Config](http://www.codeigniter.com/user_guide/libraries/config.html?highlight=ci_config), pomocí níž můžete s veškerou konfigurací manipulovat. Ale pozor - vlastní soubor si nejdříve musíte načíst `$this->config->load('my_config.php')` (jakoby už to nebylo úplně jedno).<br>
 K neviditelným závislostem se nám tak přidává další kurvítko. Nemusíte mít ani žádnou rozsáhlou business logiku, aby nastal problém. Jestliže necháte cokoli záviset na takové konfiguraci, nikdo vám nezaručí, že vám jí někdo někde nepřepíše.
 
 ##Routování
