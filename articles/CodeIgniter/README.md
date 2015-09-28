@@ -21,7 +21,7 @@ $this->load->view('view.php');
 $this->load->model('news_model');
 ```
 
-Místo názvu třídy s namespace mu předáváte “pseudocestu” ke třídě. Takže pokud budete mít modelovou třídu **News** v souboru **News.php** a ve složce **models/data**, načte vám jí, pokud zavoláte `$this->load->model('data/news')`. V případě, že vám adresářová struktura později nebude vyhovovat, víte co vás *<span title="přepisování cest, všude kde načítáte závislosti">čeká<sup>?</sup></span>*. Navíc si zvykněte na používání prefixů/sufixů.<br>
+Místo názvu třídy s namespace mu předáváte “pseudocestu” ke třídě. Takže pokud budete mít modelovou třídu **News** v souboru **News.php** a ve složce **models/data**, načte vám jí, pokud zavoláte `$this->load->model('data/news')`. V případě, že vám adresářová struktura později nebude vyhovovat, víte co vás <em title="přepisování cest, všude kde načítáte závislosti">čeká<sup>?</sup></em>. Navíc si zvykněte na používání prefixů/sufixů.<br>
 Dále dělá **CI_Loader** opravdu hodně věcí. Když načtete **view**, tak vám ho rovnou vyrenderuje, u modelových tříd a tzv. [libraries](http://www.codeigniter.com/user_guide/libraries/index.html), vám zpřístupní podle nich pojmenované property.
 
 ```php
@@ -56,7 +56,7 @@ Na validace si načtete knihovnu [Form Validation](http://www.codeigniter.com/us
 $this->form_validation->set_rules('mail', 'Mail', 'required|valid_email');
 ```
 
-Tyto validace se ve vzduchu nějak spojí s formulářem (*<span title="neověřeno">předpokládám, že se podle předaného názvu prostě validují přímo data z POST<sup>?</sup></span>*). Také se vám zpřístupní obecná funkce `validation_errors`, kterou si můžete v šabloně vypsat, aby vám renderovala porušené validace.
+Tyto validace se ve vzduchu nějak spojí s formulářem (<em title="neověřeno">předpokládám, že se podle předaného názvu prostě validují přímo data z POST<sup>?</sup></em>). Také se vám zpřístupní obecná funkce `validation_errors`, kterou si můžete v šabloně vypsat, aby vám renderovala porušené validace.
 
 ```php
 <?= validation_errors(); ?>
