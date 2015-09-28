@@ -29,7 +29,7 @@ $this->load->model('news_model');
 $this->news_model->findAllNews();
 ```
 
-A nakonec to nejlepší - po načtení helperu budete moci začít používat nové funkce z globálním prostoru [# :) #](http://oi60.tinypic.com/2la5wk0.jpg) (fu\*k you [SRP](https://en.wikipedia.org/wiki/Single_responsibility_principle), fu\*k you OOP).<br>
+A nakonec to nejlepší - po načtení helperu budete moci začít používat nové funkce z globálního prostoru [# :) #](http://oi60.tinypic.com/2la5wk0.jpg) (fu\*k you [SRP](https://en.wikipedia.org/wiki/Single_responsibility_principle), fu\*k you OOP).<br>
 Víme, jak skvělé jsou neviditelné závislosti, takže nám tohle všechno samozřejmě hodně opepří nějaké pokusy o testování, nebo refactoring. Vlastně si myslím, že kdybych se k takové aplikaci vrátil například po roce, budu mít dost velké problémy se zorientovat co na čem závisí a proč.
 
 ##Konfigurace
@@ -40,7 +40,7 @@ K neviditelným závislostem se nám tak přidává další kurvítko. Nemusíte
 
 ##Routování
 
-Pokud nemá url vyhrazenou routu, bude mapován klasicky **[controller]/[method]/[arguments]**. Vlastní routy si definujete v konfiguračním php souboru. [Syntaxe](http://www.codeigniter.com/user_guide/general/routing.html) je jednoduchá a snadno pochopitelná, až se z počátku zdálo, že to funguje docela hezky.<br> 
+Pokud nemá url vyhrazenou routu, bude mapován **[controller]/[method]/[arguments]**. Vlastní routy si definujete v konfiguračním php souboru. [Syntaxe](http://www.codeigniter.com/user_guide/general/routing.html) je jednoduchá a snadno pochopitelná, až se z počátku zdálo, že to funguje docela hezky.<br> 
 Hned po nastavení výchozí routy se ovšem objevil první problém. Fungují totiž všechny tři url adresy. Framework vám naservíruje obsah stránky, když vstoupíte na routu defaultního controlleru, stejně tak jako když použijete **localhost/welcome**, nebo **localhost/welcome/index**.<br>
 Problém spočívá v tom, že se stejný obsah nachází na více url adresách. Toto je tak <a href="http://vyhledavace.info/seo-faq/7/duplicitni-obsah" title="věnujte pozornost datu zveřejnění">staré<sup>?<sup></a> téma, že jsem se dost divil absenci této fičury ([nette](https://doc.nette.org/cs/2.3/routing#toc-seo-a-kanonizace) jí má co si ho pamatuji). Samozřejmě si můžete tento problém vyřešit sami, [zde](http://www.farinspace.com/codeigniter-htaccess-file/) například pomocí .htaccess (nebo jiného konfiguračního souboru, dle vašeho používaného serveru), přeji hodně [štěstí](https://phpfashion.com/vite-komu-ublizil-mod_rewrite).<br>
 Další komfort na který můžete zapomenout je, že by vám například router, podle slugu, naservíroval rovnou entitu, se kterou chcete pracovat.<br>
@@ -86,7 +86,7 @@ Když tohle srovnám s [Nette\Forms](https://doc.nette.org/cs/2.3/forms), kde je
 Framework není jen [zastaralý](http://stackoverflow.com/questions/22645128/start-a-project-with-codeigniter#answer-22646433) a bez důležitých funkcionalit, ale hlavně nabádá k používání různých [bad practice](https://thecelavi.wordpress.com/2014/01/21/stay-away-from-codeigniter/), kde si hlavně začátečníci mohou odvést řadu špatných návyků. 
 Proč je tedy tak populární? Možná, krom dokumentace, právě pro to, že nemá objektovou architekturu. Objektově orientované programování, je prostě náročnější než strukturované. A nenechte se zmást, to že se v kódu nachází třídy ještě [neznamená](http://stackoverflow.com/questions/18124553/my-first-oop-aproach-in-codeigniter), že je objektový.
 
-Na začátku jsem zapomněl zmínit, že framework nevyžaduje šablonovací systém, v dokumentaci se dozvíte <a href="https://codeigniter.com/user_guide/overview/at_a_glance.html#codeigniter-does-not-require-a-template-engine" title="doporučuji přečíst :)">proč<sup>?<sup></a>. Také mi scházelo spoustu dalších užitečných pomůcek, hlavně [Tracy](https://tracy.nette.org/) a její [debug bar](https://tracy.nette.org/#toc-debugger-bar), kde pravidelně kontroluji, jak rychle se web načítá, v jakém jsem zrovna presenteru (controlleru), která routa je aktivní a spoustu dalších užitečných věcí. [Databázový layer](http://www.codeigniter.com/user_guide/database/query_builder.html) tu sice je, ale takové otřesné api bych déle, než za účelem tohoto testování, nedokázal používat.
+Na začátku jsem zapomněl zmínit, že framework nevyžaduje šablonovací systém - v dokumentaci se dozvíte <a href="https://codeigniter.com/user_guide/overview/at_a_glance.html#codeigniter-does-not-require-a-template-engine" title="doporučuji přečíst :)">proč<sup>?<sup></a>. Také mi scházelo spoustu dalších užitečných pomůcek, hlavně [Tracy](https://tracy.nette.org/) a její [debug bar](https://tracy.nette.org/#toc-debugger-bar), kde pravidelně kontroluji, jak rychle se web načítá, v jakém jsem zrovna presenteru (controlleru), která routa je aktivní a spoustu dalších užitečných věcí. [Databázový layer](http://www.codeigniter.com/user_guide/database/query_builder.html) tu sice je, ale takové otřesné api bych déle, než za účelem tohoto testování, nedokázal používat.
 
 *Jistě, spoustu těchto věci bych se mohl pokusit do CodeIgniteru zakomponovat, ale proč bych to dělal?*
 
