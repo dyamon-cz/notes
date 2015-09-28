@@ -1,1 +1,3 @@
 # notes
+
+Simply, my notes.
