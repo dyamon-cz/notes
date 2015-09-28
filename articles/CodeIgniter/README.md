@@ -40,7 +40,7 @@ K neviditelným závislostem se nám tak přidává další kurvítko. Nemusíte
 
 ##Routování
 
-Pokud nemá url vyhrazenou routu, bude mapován **[controller]/[method]/[arguments]**. Vlastní routy si definujete v konfiguračním php souboru. [Syntaxe](http://www.codeigniter.com/user_guide/general/routing.html) je jednoduchá a snadno pochopitelná, až se z počátku zdálo, že to funguje docela hezky.<br> 
+Pokud nemá url vyhrazenou routu, bude mapován stylem **[controller]/[method]/[arguments]**. Vlastní routy si definujete v konfiguračním php souboru. [Syntaxe](http://www.codeigniter.com/user_guide/general/routing.html) je jednoduchá a snadno pochopitelná, až se z počátku zdálo, že to funguje docela hezky.<br> 
 Hned po nastavení výchozí routy se ovšem objevil první problém. Fungují totiž všechny tři url adresy. Framework vám naservíruje obsah stránky, když vstoupíte na routu defaultního controlleru, stejně tak jako když použijete **localhost/welcome**, nebo **localhost/welcome/index**.<br>
 Problém spočívá v tom, že se stejný obsah nachází na více url adresách. Toto je tak <a href="http://vyhledavace.info/seo-faq/7/duplicitni-obsah" title="věnujte pozornost datu zveřejnění">staré<sup>?<sup></a> téma, že jsem se dost divil absenci této fičury ([nette](https://doc.nette.org/cs/2.3/routing#toc-seo-a-kanonizace) jí má co si ho pamatuji). Samozřejmě si můžete tento problém vyřešit sami, [zde](http://www.farinspace.com/codeigniter-htaccess-file/) například pomocí .htaccess (nebo jiného konfiguračního souboru, dle vašeho používaného serveru), přeji hodně [štěstí](https://phpfashion.com/vite-komu-ublizil-mod_rewrite).<br>
 Další komfort na který můžete zapomenout je, že by vám například router, podle slugu, naservíroval rovnou entitu, se kterou chcete pracovat.<br>
