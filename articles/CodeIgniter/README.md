@@ -48,7 +48,7 @@ Také jsem hledal podobou [fičuru](https://doc.nette.org/cs/2.3/presenters#toc-
 
 ##Formuláře
 
-V Nette jsou formuláře jednou z mých vůbec nejoblíbenějších fičur a dost mě zajímalo, jak na to jde CodeIgniter. V dokumentaci na ně narazíte poprvé v tutoriálu [Create news items](http://www.codeigniter.com/user_guide/tutorial/create_news_items.html).<br>
+V Nette jsou formuláře jednou z mých vůbec nejoblíbenějších fičur a dost mě zajímalo, jak na to jde CodeIgniter. V dokumentaci na ně poprvé narazíte v tutoriálu [Create news items](http://www.codeigniter.com/user_guide/tutorial/create_news_items.html).<br>
 Na generování formulářových prvků má CodeIgniter opět [helper](http://www.codeigniter.com/user_guide/helpers/form_helper.html), který vám zpřístupní takové funkce jako `form_open`, `form_input`, `form_password` atp. Tyto funkce voláte na potřebném místě přímo šabloně.<br>
 Na validace si načtete knihovnu [Form Validation](http://www.codeigniter.com/user_guide/libraries/form_validation.html) a tu zase používáte v metodě, na kterou nasměrujete formulářovou akci.
 
@@ -77,7 +77,7 @@ Když tohle srovnám s [Nette\Forms](https://doc.nette.org/cs/2.3/forms), kde je
 
 ##Dokumentace
 
-[Dokumentaci](http://www.codeigniter.com/user_guide/index.html) jsem tu chtěl zvlášť zmínit, protože bez ní, a toho v jakém stavu je, by podle mého názoru, CodeIgniter vůbec nikdo nepoužíval. Jedná se a rozsáhlý a podrobný popis frameworku, včetně návodů jak se vypořádat s BC breaky, kterých je při této architektuře opravdu [požehnaně](http://www.codeigniter.com/user_guide/installation/upgrading.html). Díky dokumentaci se framework kdokoli hodně rychle naučí, včetně veškerých špatných návyků, které prezentuje.
+[Dokumentaci](http://www.codeigniter.com/user_guide/index.html) jsem tu chtěl zvlášť zmínit, protože bez ní, a toho v jakém stavu je, by podle mého názoru, CodeIgniter vůbec nikdo nepoužíval. Jedná se o rozsáhlý a podrobný popis frameworku, včetně návodů jak se vypořádat s BC breaky, kterých je při této architektuře opravdu [požehnaně](http://www.codeigniter.com/user_guide/installation/upgrading.html). Díky dokumentaci se framework kdokoli hodně rychle naučí, včetně veškerých špatných návyků, které prezentuje.
 
 *Možná by se mohli autoři méně soustředit na dokumentaci a více na to, že jejich framework zaspal dobu.*
 
@@ -90,6 +90,6 @@ Na začátku jsem zapomněl zmínit, že framework nevyžaduje šablonovací sys
 
 *Jistě, spoustu těchto věci bych se mohl pokusit do CodeIgniteru zakomponovat, ale proč bych to dělal?*
 
-Věřím, že jsem přehlédnul a nevyzkoušel spoustu věcí, které CI dále nabízí, problém je, že i kdyby některá z nich plnila svojí úlohu sebedokonaleji, nevyváží to jeho celkový přístup k vývoji aplikací. V anketě se sice umístil těsně na 4. místě, ale do Nette má tento framework hodně daleko.
+Věřím, že jsem přehlédnul a nevyzkoušel spoustu věcí, které CI dále nabízí, problém je, že i kdyby některá z nich plnila svojí úlohu sebedokonaleji, nevyváží to jeho celkový přístup k vývoji aplikací. V anketě se sice umístil těsně na 4. místě, ale do Nette má tento framework opravdu hodně daleko.
 
 Na závěr bych všem italským gurmánům, kteří stále používají CI doporučil, aby nezaspali (jako jejich framework) a přešli od [špaget](https://cs.wikipedia.org/wiki/%C5%A0pagetov%C3%BD_k%C3%B3d) k [OOP](https://nette.org/).
