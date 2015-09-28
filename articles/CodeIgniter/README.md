@@ -17,8 +17,8 @@ Framework **nepoužívá namespaces** a nenajdete tu ani žádný [Robot Loader]
 [Singletony](https://sites.google.com/site/steveyegge2/singleton-considered-stupid), [singletony](http://www.c2.com/cgi/wiki?SingletonsAreEvil), [singletony](https://phpfashion.com/je-singleton-zlo)… desítky článků o tomto antipatternu a CodeIgniter si ho vesele používá dál. Závislosti můžete získávat, když podědíte od **CI_Controller** nebo **CI_Model**. V neviditelné magické property `$load` se nachází [CI_Loader](http://www.codeigniter.com/user_guide/libraries/loader.html?highlight=loader).
 
 ```php
-$this->load->view(‘view.php’);
-$this->load->model(‘news_model);
+$this->load->view('view.php');
+$this->load->model('news_model');
 ```
 
 Místo názvu třídy s namespace mu předáváte “pseudocestu” ke třídě. Takže pokud budete mít modelovou třídu **News** v souboru **News.php** a ve složce **models/data**, načte vám jí, pokud zavoláte `$this->load->model(‘data/news’)`. V případě, že vám adresářová struktura později nebude vyhovovat, víte co vás *<span title="přepisování cest, všude kde načítáte závislosti">čeká<sup>?</sup></span>*. Navíc si zvykněte na používání prefixů/sufixů.<br>
@@ -53,7 +53,7 @@ Na generování formulářových prvků má CodeIgniter opět [helper](http://ww
 Na validace si načtete knihovnu [Form Validation](http://www.codeigniter.com/user_guide/libraries/form_validation.html) a tu zase používáte v metodě, na kterou nasměrujete formulářovou akci.
 
 ```php
-$this->form_validation->set_rules(‘mail’, ‘Mail’, ‘required|valid_email’);
+$this->form_validation->set_rules('mail', 'Mail', 'required|valid_email');
 ```
 
 Tyto validace se ve vzduchu nějak spojí s formulářem (*<span title="neověřeno">předpokládám, že se podle předaného názvu prostě validují přímo data z POST<sup>?</sup></span>*). Také se vám zpřístupní obecná funkce `validation_errors`, kterou si můžete v šabloně vypsat, aby vám renderovala porušené validace.
